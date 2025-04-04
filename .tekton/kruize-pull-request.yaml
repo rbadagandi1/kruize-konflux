@@ -379,7 +379,7 @@ spec:
         operator: in
         values:
         - "false"
-    - name: sast-coverity-check
+    - name: sast-coverity-check-oci-ta
       params:
       - name: image-digest
         value: $(tasks.build-image-index.results.IMAGE_DIGEST)
@@ -394,7 +394,7 @@ spec:
       taskRef:
         params:
         - name: name
-          value: sast-coverity-check-oci-ta
+          value: sast-coverity-check
         - name: bundle
           value: quay.io/kdudka/sast-coverity-check:latest
         - name: kind
